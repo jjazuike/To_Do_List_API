@@ -1,9 +1,7 @@
 // import required librarie
 import express from 'express'; // for building the server
 import cors from 'cors'; // for handling cross-origin requests
-import {
-    dbPromise
-} from './db.mjs';
+import { dbPromise } from './db.mjs';
 
 // initialize the server and make it listen to incoming requests
 const app = express(); // Initialize the express app
@@ -93,8 +91,5 @@ app.delete('/todos/:id', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log('Server running at http://localhost:${port}');
+    console.log(`Server running at http://localhost:${port}`);
 });
-
-console.log(`Hello`);
-console.log(`I like pizza`);
